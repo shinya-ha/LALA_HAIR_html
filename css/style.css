@@ -1,0 +1,1135 @@
+@charset "UTF-8";
+/* 共通部分
+-------------------------------------------- */
+html {
+  font-size: 100%;
+}
+body{
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラノギ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #333333;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+img {
+  max-width: 100%;
+}
+a:hover {
+  background-color: gray;
+  color: #fff;
+  transition: 0.1s;
+}
+/* ヘッダー */
+header {
+  z-index: 9;
+}
+.logo {
+  width: 180px;
+  margin: 20px auto 0 20px;
+}
+#top:hover {
+  background-color: gray;
+  color: #fff;
+  transition: 0.1s;
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  margin-right: 100px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 36px;
+}
+.main-nav a {
+ color: #432;
+}
+.main-nav a:hover {
+ color: #fff;
+}
+.page-header {
+ background-color: rgba(255, 255, 255, 0.2);
+ display: flex;
+ width: 100%;
+ height: 100px;
+ justify-content: space-between;
+ position: fixed;
+ right: 0;
+ top: 0;
+}
+
+/* ハンバーガーメニュー --------------------------------*/
+
+/* メニュー開閉ボタン */
+.menu-btn{
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(255,255,255,0.1); */
+}
+/* メニュー本体 */
+.hamburger-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content:space-between;
+  background: #fff;
+  opacity: 0.95;
+}
+#hmenu-img {
+  width: 700px;
+  opacity: 1;
+}
+.hmenu_item{
+  width: 100%;
+  height: auto;
+  padding: .5em 1em;
+  margin-right: 200px;
+  font-size: 1.7rem;
+  /* text-align: center; */
+  color: #333333;
+  box-sizing: border-box;
+}
+#hmenu-logo img {
+  width: 250px;
+}
+/* アニメーション部分*----------------------------*/
+
+/* アニメーション出現時 */
+.hamburger-menu{
+  transform: translateX(100vw);
+  transition:all 0.8s ease;
+}
+/* アニメーション出現後の状態 */
+.hamburger-menu.is-active{
+  transform: translateX(0);
+}
+
+/* 「TOPへ戻る」------------------------------------ */
+/***追従するトップへ戻るボタン***/
+#page-top {
+  position: fixed;
+  right: 5px;
+  bottom: 50px;
+  /* height: 50px; */
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(90deg);
+  /* font-size: 90%; */
+  line-height: 1.5rem;
+  /* color: #737373; */
+  padding: 0 0 0 15px;
+  border-top: solid 1px;
+  z-index: 10;
+}
+#page-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 15px;
+  border-top: solid 1px;
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+
+/* 画像をふわっと表示(フェードインする)--------------- */
+/* フェードイン(下から上) */
+.fadein {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 0.8s;
+}
+.fadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+/* フェードイン(右から左) */
+.fadein2 {
+  opacity : 0;
+  transform : translate(500px, 0);
+  transition : all 1.8s;
+  overflow: hidden;
+}
+.fadein2.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+/* フッター ---------------------------------------- */
+footer {
+  background: #EEEEEE;
+  z-index: 8;
+}
+.foot-menu {
+  display: flex;
+   justify-content: space-between;
+}
+.foot-wrap {
+  letter-spacing: 1px;
+  width: 90%;
+  margin: auto;
+}
+.small {
+  font-size: 1.2rem;
+  text-align: right;
+}
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+}
+.menu-left, .menu-right {
+  display: inline-block;
+  padding: 45px;
+  vertical-align: top;
+}
+.foot-wrap h3 {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #333333;
+}
+.menu-right a {
+  text-decoration: underline;
+}
+
+ #footer-link {
+  margin: 0px auto; /* 前後の隙間 */
+  padding: 10px 50px; /* 塗りの余白 */
+  font-size: 1em; /* フォントサイズ */
+  color: #333333; /* テキストカラー */
+  cursor: pointer; /* カーソルを指マークに */
+  transition: 0.3s; /* ホバーの変化を滑らかに */
+  border: 1px solid #333333;
+  text-align: center;
+}
+footer span {
+  font-size: 1rem;
+}
+/* トップページ・スライダー------------------------------*/
+.slider{
+  margin: 0 auto;
+  width: 100%;
+}
+.slider img{
+  height: auto;
+  width: 100%;
+  opacity: 0.9;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #333333;
+}
+
+/* スペース１------------------------------------------ */
+.space {
+  margin: 0 100px;
+  padding: 120px;
+}
+
+/* HOME・メインコンテンツ -------------------------------*/
+
+/* キャッチコピー */
+.page-title {
+  font-size: 5rem;
+  font-family: Domine;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 5% 0 0 20%;
+}
+/* コンセプト */
+.concept-wrapper {
+  display:flex;
+  width: auto;
+  justify-content: space-around;
+  padding: 200px 100px 200px 0;
+  background-color: #EEEEEE;
+}
+.concept-img {
+  margin: 0;
+  width: 500px;
+  opacity: 0.9;
+}
+.concept-txt{
+  margin: 100px 50px 50px 50px;
+  padding-left: 50px;
+}
+.concept-txt p{
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 50px
+}
+.concept-txt h2 {
+  font-family: Domine;
+  font-size: 4rem;
+  font-weight: normal;
+  letter-spacing: 10px;
+  border-bottom: 3px solid #333333;
+  text-align: center;
+  line-height: 70px
+}
+/* スペース２------------------------------------ */
+.space-2 {
+  margin: 0 100px;
+  padding: 60px 120px;
+}
+
+/* スタイル紹介---------------------------------- */
+.home_style h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+/* グリッド */
+.home_style_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+  margin: 5% 10%;
+}
+.grid-item img {
+  box-shadow: 0px 0px 15px #8f8f8f
+
+}
+#home_style_link {
+  padding: 5px 100px;
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+  font-size: 1rem;
+  color: #333333;
+  border: 1px solid #333333;
+  text-align: center;
+}
+.grid-item :hover {
+  transition: 0.3s;
+  opacity: 0.85;
+}
+
+/* ストア紹介------------------------------------ */
+.home_store {
+  padding: 50px 0 200px ;
+}
+.home_store h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+/* ストア画像（２枚重ねる処理） */
+.hstore_wrapper {
+  position: relative;
+  z-index: 3;
+}
+.h_store1 {
+  position:relative;
+  z-index: 2;
+  top:100px;
+  left:100px;
+  left: 0;
+  opacity: 0.9;
+}
+.h_store1 img {
+    box-shadow: 10px 10px 10px #8f8f8f;
+
+}
+.h_store2 {
+  position:absolute;
+  z-index: 1;
+  top:50px;
+  right: 0;
+  opacity: 0.9;
+  background-color: #EEEEEE;
+  width: 800px;
+  height: 500px;
+  line-height: 500px;
+  text-align: center;
+}
+.h_store2 p{
+  font-size: 1.1rem;
+  text-align: right;
+}
+.hstore_a {
+  position: absolute;
+  z-index: 3;
+  top: 300px;
+  right: 7%;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.hstore_a::before {
+	content: '';
+	position: absolute;
+	top: calc(67% - 4px);
+	right: 0;
+	transform: rotate(30deg);
+	width: 12px;
+	height: 1px;
+	background-color: #333;
+}
+
+.hstore_a::after {
+	content: '';
+	position: absolute;
+	top: 67%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 450px;
+	height: 1px;
+	background-color: #333;
+}
+.hstore_a :hover {
+  color: #8f8f8f;
+  background-color: transparent;
+}
+
+/* background -img(スクロールと同時に画像が出現) */
+.background-img {
+  box-sizing: border-box;
+  height: 686px;
+  padding-top: 166px;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  margin-bottom: 237px;
+  position: relative;
+  opacity: 0.9;
+}
+
+/* ニュース------------------------------------- */
+.news-wrapper h2{
+  text-align: center;
+  font-size: 2.5rem;
+}
+.news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+  margin: 5% 10%;
+}
+.news-grid {
+  position: relative;
+  background-color: #333333;
+}
+.news-grid p {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 1.3rem;
+}
+.news-grid img {
+  opacity: 0.5;
+  width: 450px;
+  height: 300px;
+  object-fit: cover;
+}
+.news :hover {
+  background-color: transparent;
+  color: #333333;
+}
+
+/* メニューページの開始------------------------------------ */
+#menu h2 {
+  font-family: Domine;
+  font-weight: normal;
+  font-size: 4rem;
+  color: #333333;
+  text-align: center;
+  background-image: url(../images/menutop2.png);
+  background-position: center;
+  position: relative;
+  top: 100px;
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+}
+.menu-wrapper table {
+  flex-direction: column;
+  font-size: 1.1rem;}
+td {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+th {
+  font-size: 1.3rem;
+  border-bottom: 3px solid #2ac5b3;
+}
+
+/* スタイルページ -----------------------------------------*/
+#style h2 {
+  font-family: Domine;
+  font-weight: normal;
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  background-image: url(../images/styletop.jpg);
+  background-position: center;
+  position: relative;
+  top: 100px;
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+#style h3 {
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  margin-top: 200px;
+  border-bottom: 1px solid #333333;
+}
+.style_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 5%  10% 10% 10%;
+  gap: 50px;
+}
+.style img {
+  box-shadow: 0px 0px 15px #8f8f8f
+}
+.style:hover {
+  opacity: 0.85;
+}
+/* モーダルウィンドウ(元画像) */
+.style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.style img {
+  width: 300px;
+  object-fit: contain;
+  cursor: pointer;
+}
+/* モーダルウィンドウ出現(拡大)画面 */
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.25s ease-out;
+  z-index: 10;
+}
+.modal-wrapper.show {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-image {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+.modal-image.show {
+  opacity: 1;
+}
+
+/* スタッフページ---------------------------------- */
+#staff h2 {
+  font-family: Domine;
+  font-weight: normal;
+  font-size: 4rem;
+  color: #000000;
+  text-align: center;
+  background-image: url(../images/stafftop10.jpg);
+  background-position: center;
+  position: relative;
+  top: 100px;
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+#staff h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #333333;
+}
+#staff h4 {
+  border-bottom: 2px solid #3d3d3d;
+  font-size: 1.5rem;
+  font-weight:normal;
+}
+#staff p {
+  font-size: 1.15rem;
+  color: #333333;
+}
+#staff .container {
+  display: flex;
+  width: 70%;
+  margin: 100px auto;
+}
+.staff-img {
+  max-width: 300px;
+}
+.staff-img2 {
+  max-width: 300px;
+}
+.stafftxt {
+  margin: 50px;
+}
+
+/* ストアページ------------------------------------- */
+#store h2 {
+  font-family: Domine;
+  font-weight: normal;
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  background-image: url(../images/storetop.jpg);
+  background-position: center;
+  position: relative;
+  top: 100px;
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+#store h3 {
+  font-family: Domine;
+  font-size: 2rem;
+  font-weight: normal;
+  border-bottom: 2px solid #3d3d3d ;
+}
+#store h4 {
+  font-size: 1.5rem;
+}
+#store p {
+  font-size: 1.25rem;
+}
+.store-info {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 150px 10% ;
+}
+.store-img {
+  width: 500px;
+}
+.store-txt {
+  margin: 0 auto;
+}
+
+/* 店舗情報・地図 */
+#location .wrapper {
+  flex-direction: column;
+}
+.location-map {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.border-store {
+  border-bottom: 1px solid #333333;
+  width: 90%;
+  margin: 0 auto;
+}
+/* 予約ページ--------------------------------------- */
+#reserve h2 {
+  font-family: Domine;
+  font-weight: normal;
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  background-image: url(../images/reservetop2.png);
+  background-position: center;
+  position: relative;
+  top: 100px;
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+#reserve .container {
+  display: flex;
+  justify-content: space-around;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.reserve-txt {
+  margin-top: 0;
+  flex-direction: column;
+}
+.fieldset__wrapper {
+  margin: 50px 0;
+}
+.reserve-txt h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+.reserve-txt p {
+  font-size: 1.15rem;
+}
+.reserve-img {
+  width: 300px;
+}
+/* 予約フォーム */
+#reserve .section {
+text-align: center;
+margin: 150px;
+}
+#reserve h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+#submit {
+  border: 1px solid #333333;
+  padding: 2px;
+}
+#submit:hover {
+  background-color: #cfcfcf;
+}
+#submit_result {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+#tenpo {
+  border: 1px solid #333333;
+  margin-bottom: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+#date, #time {
+  cursor: pointer;
+}
+.menuSelect label {
+  display: inline-block;
+}
+#displayMenu {
+  font-size: 1.3rem;
+  display: inline-block;
+  border: 4px solid #333333;
+  margin: 10px 0 30px 0;
+  padding: 10px 10px 5px 10px;
+}
+/* メールフォーム */
+.mail h3{
+  font-family: Domine;
+  font-size: 2rem;
+}
+.time {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #333333;
+}
+#reserve .space {
+  padding: 50px;
+}
+.mail {
+  color: #333333;
+  text-align: center;
+  margin-bottom: 75px;
+  }
+  .mail h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid #333333;
+    width: 60%;
+    margin: 100px auto 30px auto;
+  }
+  form div {
+    margin-bottom: 14px;
+  }
+  label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    background: rgba(255, 255, 255, .5);
+    border: 1px #333333 solid;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    max-width: 480px;
+  }
+  textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+  }
+  input[type="submit"] {
+    border: 1px solid #333333;
+    cursor: pointer;
+    line-height: 1;
+    margin-bottom: 50px;
+    padding: 5px;
+  }
+/* ボタン */
+.tel, .link {
+  margin: 20px auto; /* 前後の隙間 */
+  padding: 20px; /* 塗りの余白 */
+  font-size: 1em; /* フォントサイズ */
+  background-color: lightgray; /* 背景色 */
+  color: #333333; /* テキストカラー */
+  cursor: pointer; /* カーソルを指マークに */
+  transition: 0.3s; /* ホバーの変化を滑らかに */
+  border: 1px solid #333333;
+  display: block;
+  width: 400px;
+}
+
+
+
+/* モバイル版・共通部分
+------------------------------------------- */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  img {
+    max-width: 100%;
+  }
+    /* ヘッダー
+    ----------------------------------------- */
+  .page-header {
+  flex-direction :column;
+  align-items: center;
+  }
+  header {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    background: #fff;
+  }
+  .main-nav  {
+    font-size: 0.75rem;
+    margin-top: 10px;
+  }
+  .main-nav li {
+    margin: 0 8px;
+  }
+  .logo {
+    width: 20%;
+  }
+    /* フッター
+    -------------------------------------------- */
+    /* ぬかやま先生の記述 */
+    /* .menu-left,
+    .menu-center,
+    .menu-right {
+      display: block;
+      width: 100%;
+    } */
+
+  footer {
+    flex-direction :column;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  footer p ,h2 ,h3{
+    font-size: 0.9rem;
+  }
+  .foot-wrap span{
+    font-size: 0.9rem;
+  }
+  .foot-wrap {
+    display: block;
+    flex-direction :column;
+    align-items: center;
+  }
+  .menu-left, .menu-center, .menu-right {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .menu-center, .menu-right {
+    display: none;
+  }
+    /* トップページ
+    -------------------------------------------- */
+    /* カバー画像 */
+  .big-bg {
+  width: 100%;
+  max-height: 350px;
+    /* background-size:contain; */
+  }
+    /* トップ・中身↓
+    ----------------------------------------------- */
+  .concept {
+    flex-direction: column;
+  }
+
+  .concept-img {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* 店内イメージと説明
+   ***************************************** */
+  /* ぬかやま先生の記述 */
+   .store {
+    flex-direction: column;
+    display: block;
+  }
+  .store-img {
+    /* display: none; */
+    width: 100%;
+    margin: 0;
+    min-width: 100px;
+  }
+
+  /* 自分の記述↓ */
+ .home-content {
+    margin-top: 20%;
+    flex-direction :column;
+    align-items: center;
+    max-width: 400px;
+  }
+  .home-content p {
+    font-size: 1rem;
+    flex-direction :column;
+    align-items: center;
+  }
+  .concept-txt {
+    margin: 0 auto;
+    padding: 10px;
+    /* font-size: 1rem; */
+  }
+  .concept-txt h2 {
+    font-size: 1.25rem;
+  }
+  .concept-txt p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .store p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .space {
+    display: none;
+  }
+  .space-2 {
+    display: none;
+  }
+  .concept-wrapper {
+    display: block;
+    margin: 20px;
+    padding: 0 4%;
+  }
+  .concept-img img {
+    display: none;
+    width: auto;
+    max-height: 300px;
+    margin: 0 auto;
+  }
+  .store-img2 {
+    display: none;
+    width: 100%;
+    margin: 0;
+    min-width: 100px;
+  }
+  .concept-img2 {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* メニューページ
+  -------------------------------------------- */
+  .menu-list {
+    flex-direction :column;
+    align-items: center;
+  }
+  .page-title-menu {
+    height: 200px;
+    margin-bottom: 0;
+    background-size: 100%;
+    /* background-image: none; */
+  }
+  /* スタイルページ
+  -------------------------------------------- */
+  .style-wrapper {
+    min-width: 400px;
+  }
+  .stylelist {
+    flex-direction :column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .stylelist img {
+    max-width: 180px;
+  }
+  .item {
+    width: 180px;
+  }
+  .big-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .big-box img {
+    height: auto;
+  }
+  .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4%;
+    margin-bottom: auto;
+    padding-bottom: 6%;
+    width: 380px;
+  }
+  .best-style .wrapper {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .page-title-style {
+    height: 200px;
+    margin-bottom: 0;
+    background-size: 100%;
+  }
+  .style-wrapper {
+    background-color: #fff;
+  }
+  /* スタッフページ
+  ------------------------------------------- */
+  #staff .container {
+    flex-direction :column;
+    align-items: center;
+    width: fit-content;
+    margin: 50px auto;
+  }
+  .page-title-staff {
+    height: 200px;
+    margin-bottom: 0;
+    background-size: 100%;
+  }
+  .stafftxt {
+    margin: 10px 10px ;
+  }
+  .stafftxt p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .stafftxt h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .stafftxt h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: normal;
+  }
+  /* ストア情報ページ
+  ----------------------------------------- */
+  .store-wrapper {
+    flex-direction :column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .page-title-store {
+    height: 150px;
+    margin-bottom: 50px;
+    background-size: 100%;
+  }
+  .store-info {
+    /* display: block; */
+    flex-direction :column-reverse;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .store-txt {
+    margin: 0 auto;
+    padding-left: 0;
+    font-size: 1rem;
+    width: auto;
+  }
+  .store-txt h2 {
+    display: inline-block;
+    font-weight: normal;
+    border-bottom:  solid#2ac5b3 ;
+    font-size: 2rem;
+  }
+  .location-map {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    }
+  .location-map iframe {
+    position: absolute;
+    margin: 5px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    }
+  .border-store {
+    padding: 5px;
+    }
+    /* 予約(コンタクト)ページ
+    ------------------------------------- */
+  .reserve-wrapper {
+    flex-direction :column;
+    align-items: center;
+  }
+  .page-title-reserve {
+    height: 200px;
+    margin-bottom: 0;
+    background-size: 100%;
+    }
+  #reserve .container {
+    flex-direction :column;
+    align-items: center;
+    margin: 30px 20px;
+  }
+  .mail {
+    margin: 0 50px;
+  }
+  .reserve-img {
+    display: none;
+  }
+  #reserve .page-title {
+    margin-top: 50px;
+  }
+  #reserve .space {
+    display: none;
+  }
+}
+

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LALA HAIR</title>
+  <meta name="description" content="大阪・ニューヨークに拠点を置く美容室">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+  <!-- jQueryu -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- pickadate（予約カレンダー） -->
+  <link rel="stylesheet" href="/pickadate.js-3.6.2/lib/themes/default.css">
+  <link rel="stylesheet" href="/pickadate.js-3.6.2/lib/themes/default.date.css">
+  <link rel="stylesheet" href="/pickadate.js-3.6.2/lib/themes/default.time.css">
+  <!-- <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script> -->
+  <script src="pickadate.js-3.6.2/lib/legacy.js"></script>
+  <script src="pickadate.js-3.6.2/lib/picker.js"></script>
+  <script src="pickadate.js-3.6.2/lib/picker.date.js"></script>
+  <script src="pickadate.js-3.6.2/lib/picker.time.js"></script>
+  <script src="pickadate.js-3.6.2/lib/translations/ja_JP.js"></script>
+
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="page-header">
+    <h1 id="top"><a href="index.html"><img class="logo" src="images/logo2.png" alt="LALA HAIRホーム"></a></h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="style.html">STYLE</a></li>
+        <li><a href="staff.html">STAFF</a></li>
+        <li><a href="store.html">STORE</a></li>
+        <li><a href="contact.html">RESERVE</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ハンバーガーメニュー -->
+  <button type="button" class="menu-btn">
+    <img src="/images/bars.png" aria-hidden="true">
+  </button>
+  <div class="hamburger-menu">
+    <div class="hmenu-img" id="hmenu-img"><img src="/images/concept-img3.jpg" alt=""></div>
+    <div>
+      <div id="hmenu-logo">
+        <img class="logo" src="images/logo2.png" alt="LALA HAIRホーム">
+      </div>
+      <div class="hmenu_item"><a href="index.html">HOME</a></div>
+      <div class="hmenu_item"><a href="menu.html">MENU</a></div>
+      <div class="hmenu_item"><a href="style.html">STYLE</a></div>
+      <div class="hmenu_item"><a href="staff.html">STAFF</a></div>
+      <div class="hmenu_item"><a href="store.html">STORE</a></div>
+      <div class="hmenu_item"><a href="contact.html">RESERVE</a></div>
+    </div>
+  </div>
+  <!-- 「TOPへ戻る」 -->
+  <a href="#" id="page-top">TOP</a>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <div id="reserve">
+      <div class="reserve-wrapper">
+        <h2>RESERVE</h2>
+        <div class="space"></div>
+        <div class="container fadein">
+          <div class="reserve-img">
+            <img src="images/reserve.jpg" alt="予約イメージ">
+          </div>
+          <div class="reserve-txt">
+            <h3>ご予約<span style="font-size:1.5rem;">(お電話・HOTPEPPER Beauty)</span></h3>
+            <br>
+            <p>※お電話の際はおかけ間違いにご注意ください。</p>
+            <br>
+            <p><span class="time">営業時間：10:00 ~ 19:00</span></p>
+            <p><b>（火曜定休）</b></p>
+            <br>
+            <p><a class="tel" href="tel:06-****-****"><i class="fas fa-phone-square"></i>06-****-****</a></p>
+            <p><a class="link" href="https://beauty.hotpepper.jp/svcSB/">HOTPEPPER Beautyでの予約はこちら</a></p>
+          </div>
+        </div>
+
+        <section class="section">
+          <div class="section__block section__block--scoped">
+            <h3>ご予約は当ホームページからも可能です</h3>
+            <fieldset class="fieldset fieldset--demo">
+              <div class="fieldset__wrapper">
+                <h4>■店舗</h4><br>
+                <select name="tenpo" id="tenpo" required>
+                  <option value="">-店舗を選択してください-</option>
+                  <option value="osaka">OSAKA店</option>
+                  <option value="newyork">NEWYORK店</option>
+                </select>
+
+                <h4>■予約日</h4><br>
+                <input id="date" class="fieldset__input js__datepicker" type="text"
+                  placeholder="こちらをクリックして日付を指定してください"><br><br>
+                <h4>■予約時間</h4><br>
+                <input id="time" class="fieldset__input js__datepicker" type="text"
+                  placeholder="こちらをクリックして時刻を指定してください"><br><br>
+                <h4>■メニュー(以下からお選びください)</h4><br>
+                <div class="menuSelect" id="selectMenu">
+                  <form name="menuForm" id="form">
+                    <label><input type="checkbox" name="menu" value="デザインカット">デザインカット…5,500円</label>　
+                    <label><input type="checkbox" name="menu" value="前髪カット">前髪カット…3,000円</label>　<br>
+                    <label><input type="checkbox" name="menu" value="デザインカラー">デザインカラー…6,000円</label>　
+                    <label><input type="checkbox" name="menu" value="ブリーチ">ブリーチ…6,000円</label>　
+                    <label><input type="checkbox" name="menu" value="ブリーチ＋カラー">ブリーチ＋カラー…9,000円</label>　<br>
+                    <label><input type="checkbox" name="menu" value="リタッチ（根本）カラー">リタッチ（根本）カラー…4,000円</label>　
+                    <label><input type="checkbox" name="menu" value="白髪染め">白髪染め…5,000円</label>　<br>
+                    <label><input type="checkbox" name="menu" value="デザインパーマ">デザインパーマ…6,000円</label>　
+                    <label><input type="checkbox" name="menu" value="デジタルパーマ">デジタルパーマ…6,500円</label>　
+                    <label><input type="checkbox" name="menu" value="ポイントパーマ">ポイントパーマ…4,000円</label>　<br>
+                    <label><input type="checkbox" name="menu" value="ストレートパーマ">ストレートパーマ…6,000円</label>　
+                    <label><input type="checkbox" name="menu" value="縮毛矯正">縮毛矯正…6,500円</label>　<br>
+                    <label><input type="checkbox" name="menu" value="トリートメントコース">トリートメントのみ…3,000円</label>　
+                    <label><input type="checkbox" name="menu" value="トリートメントコース">トリートメントコース…5,000円</label>　<br>
+                    <label><input type="checkbox" name="menu" value="シャンプー＋ブロー">シャンプー＋ブロー…3,000円</label>　
+                    <label><input type="checkbox" name="menu" value="セットアップ">セットアップ…4,000円</label>
+                  </form>
+                </div>
+                <p>※選択中のメニューは以下の通りです</p>
+                <div id="displayMenu"></div><br>
+                <button id="submit" class="fieldset__button button button--small">予約する</button>
+              </div>
+              <div id="result"></div> <!-- ボタン押下の結果を表示する -->
+            </fieldset>
+          </div>
+        </section>
+
+        <div class="mail fadein">
+          <h3>E-mail（その他お問い合わせ）</h3>
+          <form action="#">
+            <div>
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="your-name">
+            </div>
+
+            <div>
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="your-email">
+            </div>
+
+            <div>
+              <label for="message">メッセージ</label>
+              <textarea id="message" name="your-message"></textarea>
+            </div>
+
+            <input type="submit" class="button" value="送信">
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="foot-wrap">
+      <div class="foot-menu">
+        <h2><a href="index.html"><img class="logo" src="images/logo2.png" alt="LALA HAIRホーム"></a></h2>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="style.html">STYLE</a></li>
+            <li><a href="staff.html">STAFF</a></li>
+            <li><a href="store.html">STORE</a></li>
+            <li><a href="contact.html">RESERVE</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-menu fadein">
+        <div class="menu-left">
+          <pre><h3>LALA HAIR  <span>-OSAKA-</span></h3></pre>
+          <p>大阪市北区芝田2丁目9-20 学園ビル9階</p>
+          <p>Tel 06-****-****</p>
+          <p><span>(火曜定休/10:00～19:00)</span></p>
+          <br>
+          <p><a id="footer-link" href="contact.html">予約ページ</a></p>
+        </div>
+
+        <div class="menu-right">
+          <pre><h3>LALA HAIR  <span>-NEWYORK-</span></h3></pre>
+          <p>20 W 34th St, New York NY 10001</p>
+          <p>Tel +1**********</p>
+          <p><span>(火曜定休/10:00～19:00)</span></p>
+        </div>
+      </div>
+      <div class="small">
+        <p><small>Copyright &copy; 2021 LALA HAIR All Rights Reserved</small></p>
+      </div>
+    </div>
+  </footer>
+  <script src="/JavaScript/script_main.js"></script>
+
+  <script>
+    // 「RESERVE」ページの予約カレンダー（ライブラリ・「pickadate」使用）
+    $(function () {
+
+      // datepicker表示イベント
+      $('#date').pickadate();
+
+      // timepicker表示イベント
+      $('#time').pickatime({
+        format: 'HH:i', // 24時間表記
+        interval: 30,   // 表示間隔
+        min: [10, 00],   // 予約開始時間
+        max: [18, 00]    // 予約終了時間
+      });
+
+      // 予約ボタン押下イベント
+      $('#submit').click(onClickSubmit);
+
+      //予約ボタン押下処理
+      function onClickSubmit() {
+        $('#submit_result').remove();
+        let date = $('#date').val();
+        let time = $('#time').val();
+
+        if (date != '' && time != '') {
+
+          // TODO 予約をサーバに送信
+          // params={};
+          // prams.date=date;
+          // params.time=time;
+          // $.post("hoge.php",params,function(data){
+          // ここにサーバ送信後の処理結果を書く
+          // });
+
+          //予約完了メッセージ
+          $('#result').after('<div id="submit_result" class="section__block section__block--notification"><p><strong>' + date + ' ' + time + '〜</strong><br>ご予約を受け付けました</p></div>');
+
+        } else {
+          //予約失敗メッセージ
+          $('#result').after('<div id="submit_result" class="section__block section__block--notification-red"><p>予約日・予約時間を選択してください</p></div>');
+        }
+      }
+
+    });
+    //翌日から61日後まで選択可／火曜日は選択不可の設定
+    $('#date').pickadate({
+      format: 'yyyy/mm/dd',
+      min: 1,
+      max: 61,
+      disable: [2]
+    })
+
+  </script>
+</body>
+
+</html>
